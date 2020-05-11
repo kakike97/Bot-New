@@ -45,11 +45,12 @@ function Facebook(accessToken, groupId)
         let formPublish = new FormData();
         let date = moment().format('dddd').toUpperCase() + ' NGÀY '+ moment().format('LL').toUpperCase();
         formPublish.append('message',
-            `# TIN TỨC BUỔI TRƯA ${date}\n` +
+            `# TIN TỨC BUỔI SÁNG ${date}\n` +
             '\n' +
             '## thông tin\n' +
-            '* Bài viết được tự động đăng lúc 12 giờ trưa hàng ngày\n' +
-            '* Đây là post tự động được tạo bởi Lerni và lấy dữ liệu từ VnExpress qua RSS các bạn có thể check source code [tại đây](https://bit.ly/lerni-bot-fb)');
+            '* Bài viết được tự động đăng lúc 7:00 sáng hằng ngày\n' +
+            '* Đây là post tự động được tạo bởi Đất Đai Hôm Nay và lấy dữ liệu từ VnExpress
+            '* Để không bỏ lỡ bài Điểm tin nào, bạn có thể ấn [theo dõi](https://www.facebook.com/DatDaiHomNay/)');
         formPublish.append('formatting', 'MARKDOWN');
 
         for (let i = 0; i < images.length ; i++) {
